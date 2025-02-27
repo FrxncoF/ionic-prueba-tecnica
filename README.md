@@ -3,7 +3,7 @@ Prueba Técnica: Desarrollador Mobile Junior (Ionic)
 Esta es una aplicación Ionic para mostrar una lista de usuarios y sus detalles, con la funcionalidad de agregar usuarios a favoritos.
 ## Instalación
 
-1.  Clona el repositorio.
+1.  Clona el repositorio. en la rama "MASTER"
 2.  Navega a la carpeta del proyecto.
 3.  Ejecuta `npm install` para instalar las dependencias.
    
