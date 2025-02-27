@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/users"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Favoritos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="favorites.length > 0">
+    <ion-item *ngFor="let user of favorites">
+      <ion-label>{{ user.name }}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-text *ngIf="favorites.length === 0">No tienes usuarios favoritos.</ion-text>
+</ion-content>

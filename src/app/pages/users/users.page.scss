@@ -1,0 +1,18 @@
+ion-searchbar {
+    padding: 16px;
+    --background: #f0f0f0;
+  }
+  
+  ion-list {
+    ion-item {
+      --padding-start: 16px;
+      --padding-end: 16px;
+    }
+  }
+
+  ion-item {
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }

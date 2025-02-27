@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Usuarios</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/favorites">
+        <ion-icon name="star"></ion-icon>
+        <ion-label>Favoritos</ion-label>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterUsers()" placeholder="Buscar usuario..."></ion-searchbar>
+
+  <ion-spinner *ngIf="loading" name="crescent" style="width: 64px; height: 64px; margin: 32px auto;"></ion-spinner>
+
+  <ion-text color="danger" *ngIf="error">Error: {{error}}</ion-text>
+
+  <ion-list *ngIf="!loading && !error">
+    <ion-item *ngFor="let user of filteredUsers" [routerLink]="['/user-details', user.id]">
+      <ion-label>{{ user.name }}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-text *ngIf="!loading && filteredUsers.length === 0">No se encontraron usuarios.</ion-text>
+</ion-content>
